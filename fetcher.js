@@ -8,7 +8,7 @@ request(fetcher[0], (error, response, body) => {
   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
 
   if (response.statusCode !== 200) {
-    response.readableEnded('something went wrong...')
+    response.end('something went wrong...')
   } else {
   //console.log('body:', body); // Print the HTML for the Google homepage.
 
